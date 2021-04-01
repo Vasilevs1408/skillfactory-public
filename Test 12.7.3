@@ -1,0 +1,12 @@
+per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
+money = input("Ведите сумму вклада: ")
+float_money = float(money)
+TKB = int((per_cent['ТКБ']) * (float_money/100))
+SKB = int((per_cent['СКБ']) * (float_money/100))
+VTB = int((per_cent['ВТБ']) * (float_money/100))
+SBER = int((per_cent['СБЕР']) * (float_money/100))
+deposit = TKB, SKB, VTB, SBER
+print(deposit)
+sorted_deposit = sorted(deposit)
+maks_deposit = sorted_deposit[-1]
+print("Максимальная сумма, которую вы можете заработать -", maks_deposit)
